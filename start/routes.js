@@ -14,6 +14,8 @@
 */
 
 /** @type {typeof import('@adonisjs/framework/src/Route/Manager')} */
-const Route = use('Route')
+const Route = use('Route');
 
-Route.on('/').render('welcome')
+Route.get('/', 'PageController.home');
+Route.get('/contact', 'PageController.contact');
+Route.get('/:category/:min/:max', 'ItemController.index');
