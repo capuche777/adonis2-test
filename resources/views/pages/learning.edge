@@ -1,0 +1,17 @@
+@layout('layouts/app')
+@section('title')
+    Learning Edge Template
+@endsection
+
+
+@section('content')
+    <h1>Learning Edge</h1>
+
+    {{ user.location }}
+
+    @unless(user.loggedIn)
+        <h3 style="color: red">Logged Out</h3>
+    @else
+        <h3 style="color: green">Logged In</h3>
+    @endunless
+@endsection
