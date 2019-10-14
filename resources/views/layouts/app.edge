@@ -8,6 +8,37 @@
 </head>
 <body>
     @include('partials/menu')
+    @component('components/card', color = 'purple', padding = '20px')
+        @slot('description')
+            Description 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum nibh sem,
+            in tristique orci vulputate sed. Morbi malesuada euismod feugiat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent nec consequat lectus. Etiam convallis aliquet velit. Sed mollis,
+            metus suscipit varius volutpat, lacus purus rutrum lorem, nec placerat nisi neque et lorem.
+        @endslot
+    @endcomponent
+
+    @component('components/card', color = 'red', padding = '20px')
+        @slot('description')
+            Description 2: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum nibh sem,
+            in tristique orci vulputate sed. Morbi malesuada euismod feugiat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent nec consequat lectus. Etiam convallis aliquet velit. Sed mollis,
+            metus suscipit varius volutpat, lacus purus rutrum lorem, nec placerat nisi neque et lorem.
+        @endslot
+    @endcomponent
+
+    @component('components/card', color = 'blue', padding = '20px')
+        @slot('description')
+            Description 3: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam elementum nibh sem,
+            in tristique orci vulputate sed. Morbi malesuada euismod feugiat. Lorem ipsum dolor sit amet,
+            consectetur adipiscing elit. Praesent nec consequat lectus. Etiam convallis aliquet velit. Sed mollis,
+            metus suscipit varius volutpat, lacus purus rutrum lorem, nec placerat nisi neque et lorem.
+        @endslot
+    @endcomponent
+
     @!section('content')
+
+    @section('footer')
+        <h1>This is default footer</h1>
+    @endsection
 </body>
 </html>
